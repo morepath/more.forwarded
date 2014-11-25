@@ -7,7 +7,7 @@ long_description = (
 
 setup(
     name='more.forwarded',
-    version='0.1.dev0',
+    version='0.1',
     description="Forwarded header support for Morepath",
     long_description=long_description,
     author="Martijn Faassen",
