@@ -21,7 +21,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'morepath >= 0.8',
+        'morepath >= 0.9',
     ],
     extras_require=dict(
         test=[
