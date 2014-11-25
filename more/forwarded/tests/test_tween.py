@@ -26,4 +26,4 @@ def test_forwarded_app():
     response = c.get('/foo',
                      headers={'Forwarded': 'host=www.example.com'})
 
-    assert response.body == 'http://www.example.com/foo'
+    assert response.body == b'http://www.example.com/foo'
