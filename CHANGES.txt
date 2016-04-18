@@ -4,8 +4,11 @@ CHANGES
 0.2 (unreleased)
 ================
 
-- Nothing changed yet.
+- Morepath 0.14 introduces a HOST_HEADER_PROTECTION tween that we
+  should be used over. This stops the forwarded header from injecting
+  incorrect Host headers.
 
+- Make tests work with Morepath 0.14 and later.
 
 0.1 (2014-11-25)
 ================

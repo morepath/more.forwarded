@@ -3,13 +3,12 @@ from webtest import TestApp as Client
 from more.forwarded import ForwardedApp
 import more.forwarded
 
-def test_forwarded_app():
-    config = morepath.setup()
 
-    config.scan(more.forwarded)
+def test_forwarded_app():
+    morepath.scan(more.forwarded)
 
     class App(ForwardedApp):
-        testing_config = config
+        pass
 
     @App.path(path='foo')
     class Root(object):
@@ -19,7 +18,7 @@ def test_forwarded_app():
     def root_default(self, request):
         return request.link(self)
 
-    config.commit()
+    App.commit()
 
     c = Client(App())
 
