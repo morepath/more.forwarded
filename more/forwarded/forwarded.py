@@ -80,7 +80,7 @@ def parse(header):
         item = {}
         element = element.strip()
         if not element:
-          continue
+            continue
         for pair in element.split(';'):
             token, equals, value = pair.partition('=')
             if equals != '=':
@@ -103,4 +103,3 @@ def parse(header):
             item[token] = value
         result.append(item)
     return result
-
