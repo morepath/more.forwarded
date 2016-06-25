@@ -18,10 +18,11 @@ def test_parse_forwarded():
             [{'for': '192.0.2.60', 'proto': 'http', 'by': '203.0.113.43'}])
     assert (forwarded.parse('for=192.0.2.43, for=198.51.100.17') ==
             [{'for': '192.0.2.43'}, {'for': '198.51.100.17'}])
-    assert (forwarded.parse(
-        'for=192.0.2.43;by=203.0.113.43 , for=198.51.100.17') ==
-            [{'for': '192.0.2.43', 'by': '203.0.113.43'},
-             {'for': '198.51.100.17'}])
+    assert (
+        forwarded.parse(
+            'for=192.0.2.43;by=203.0.113.43 , for=198.51.100.17') ==
+        [{'for': '192.0.2.43', 'by': '203.0.113.43'}, {'for': '198.51.100.17'}]
+    )
 
 
 def test_parse_forwarded_empty():

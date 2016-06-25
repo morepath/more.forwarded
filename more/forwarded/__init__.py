@@ -1,1 +1,1 @@
-from .core import ForwardedApp
+from .core import ForwardedApp  # noqa
