@@ -198,7 +198,7 @@ def test_forwarded_handler_missing_header():
 
 def test_forwarded_handler_error():
     def handle(request):
-        pass
+        pass  # pragma: no cover
 
     wrapped_handle = forwarded.handler_factory(handle)
 
