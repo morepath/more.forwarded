@@ -15,14 +15,27 @@ setup(
     author_email="faassen@startifact.com",
     keywords='morepath forwarded',
     license="BSD",
-    url="http://pypi.python.org/pypi/more.static",
+    url="https://github.com/morepath/more.forwarded",
     namespace_packages=['more'],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
+    classifiers=[
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Environment :: Web Environment",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        "Topic :: Internet :: WWW/HTTP :: WSGI",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Development Status :: 5 - Production/Stable'
+    ],
     install_requires=[
         'setuptools',
-        'morepath > 0.13.2',
+        'morepath >= 0.15',
     ],
     extras_require=dict(
         test=[

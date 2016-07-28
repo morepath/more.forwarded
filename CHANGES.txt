@@ -4,7 +4,11 @@ CHANGES
 0.3 (unreleased)
 ================
 
-- Nothing changed yet.
+- Add .travis.yml and test environments for py35, pep8 and coverage.
+
+- Fix py.test and coverage.
+
+- Clean up meta data.
 
 
 0.2 (2016-04-26)
